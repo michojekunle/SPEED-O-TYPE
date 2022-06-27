@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Speed-O-Type</title>
+</head>
+<body>
+    <button id="settings-button" class="settings-button"><i class="fas fa-cog"></i></button>
+    <div id="settings" class="settings">
+        <form id="settings-form">
+            <div>
+                <label for="difficulty">Difficulty</label>
+                <select name="difficulty" id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <h2>Speed-O-Type</h2>
+        <p><i class="fas fa-laptop"></i> How fast can you type? <i class="fas fa-laptop"></i></p>
+        <small>Next word here:</small>
+        <h1 id="word"></h1>
+        <input id="input-text" type="text" autocomplete="off" placeholder="Type the word here...">
+        <p id="score-container">Score: <span id="score">0</span> </p>
+        <p id="time-container">Time Left: <span id="time">10s</span></p>
+        
+        <div class="end-game-container" id="end-game-container">
+
+        </div>
+
+    </div>
+
+    <script src="/index.js"></script>
+</body>
+</html>

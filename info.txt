@@ -1,0 +1,3 @@
+focus on input when game starts 
+generate random words
+timing countdown function
