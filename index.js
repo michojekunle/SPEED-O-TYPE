@@ -8,7 +8,7 @@ const timeEl = document.querySelector('span#time')
 const endGameEl = document.querySelector('#end-game-container')
 
 const wordList = [
-    'ukraine',
+    'ukraine', 
     'michael',
     'hula-baloo',
     'singing',
@@ -117,7 +117,11 @@ inputText.addEventListener('input', (e) => {
 //settings button functionality 
 //button on click
 
-// difficultySelect.addEventListener('change', () )
+difficultySelect.addEventListener('change', () => {
+    // if(difficultySelect.value === 'easy') 
+    
+    console.log(difficultySelect.value);
+})
 
 settingsBtn.addEventListener('click', () => {
     settings.classList.toggle('show');
