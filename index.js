@@ -109,7 +109,8 @@ inputText.addEventListener('input', (e) => {
 //button on click
 
 difficultySelect.addEventListener('change', () => {
-    if()
+    // if()
+    console.log(difficultySelect.value);
 })
 
 settingsBtn.addEventListener('click', () => {
