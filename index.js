@@ -51,7 +51,7 @@ let score = 0;
 
 //initialize time number
 let time = 10;
-const timeInterval = setInterval(updateTime(), 1000);
+const timeInterval = setInterval(updateTime, 1000);
 
 //counting down time
 
@@ -61,22 +61,22 @@ function getRandomWord() {
 };
 
 
-//updateTime function
+// updateTime function
 function updateTime() {
     time--;
     timeEl.innerHTML = `${time}s`
     if (time===0){
-        clearInterval(timeInterval)
+        clearInterval(timeInterval);
+        //end Game
         gameOver();
     }
 }
-
 
 function gameOver() {
     endGameEl.innerHTML = `
     <h1>Time ran out</h1>
     <p>Here is your final score ${score}</p>
-    <button onClick="window.location.reload()" >Reload</button>`;
+    <button onclick="window.location.reload()">Reload</button>`;
     endGameEl.style.display = 'flex';
 }
 
@@ -99,9 +99,18 @@ inputText.addEventListener('input', (e) => {
     if (typedWord === randomWord){
         addWordToDom();
         updateScore();
+
+        //to clear input field after correct attempt
         e.target.value = '';
 
         //time difficulty functionality
+        if (difficultySelect.value === 'Hard')
+            time += 1;
+            else if (difficultySelect.value === 'Medium')
+                time += 2;
+                else if (difficultySelect.value === 'Easy')
+                   time += 4;
+        updateTime();
     }
 })
 
