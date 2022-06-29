@@ -51,25 +51,28 @@ let score = 0;
 
 //initialize time number
 let time = 10;
+
+//initializing time intervals for the count down 1s basically.
 const timeInterval = setInterval(updateTime, 1000);
 
 //counting down time
 
 //generate random word function
 function getRandomWord() {
-    return wordList[Math.floor(Math.random()* wordList.length)]
+    return wordList[Math.floor(Math.random()* wordList.length)];
 };
 
 
 // updateTime function
 function updateTime() {
     time--;
-    timeEl.innerHTML = `${time}s`
+    timeEl.innerHTML = `${time}s`;
+
     if (time===0){
         clearInterval(timeInterval);
         //end Game
         gameOver();
-    }
+    };
 }
 
 function gameOver() {
@@ -104,12 +107,20 @@ inputText.addEventListener('input', (e) => {
         e.target.value = '';
 
         //time difficulty functionality
-        if (difficultySelect.value === 'Hard')
+        if (difficultySelect.value === "Hard")
+        {
             time += 1;
-            else if (difficultySelect.value === 'Medium')
-                time += 2;
-                else if (difficultySelect.value === 'Easy')
-                   time += 4;
+        }
+        else if (difficultySelect.value === "Medium")
+        {
+            time += 2;
+        }
+        else 
+        {
+            time += 4;
+        };
+
+        
         updateTime();
     }
 })
