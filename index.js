@@ -52,6 +52,9 @@ let score = 0;
 //initialize time number
 let time = 10;
 
+//initialzing difficulty level 
+
+
 //initializing time intervals for the count down 1s basically.
 const timeInterval = setInterval(updateTime, 1000);
 
@@ -120,7 +123,7 @@ inputText.addEventListener('input', (e) => {
             time += 4;
         };
 
-        
+
         updateTime();
     }
 })
