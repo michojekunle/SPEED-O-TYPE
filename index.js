@@ -1,7 +1,7 @@
-const settingsBtn = document.querySelector('#settings-button')
-const settings = document.querySelector('#settings')
-const difficultySelect = document.querySelector('#difficulty')
-const word = document.querySelector('#word')
+const settingsBtn = document.querySelector('#settings-button');
+const settings = document.querySelector('#settings');
+const difficultySelect = document.querySelector('#difficulty');
+const word = document.querySelector('#word');
 const inputText = document.querySelector('#input-text')
 const scoreEl = document.querySelector('span#score')
 const timeEl = document.querySelector('span#time')
@@ -62,6 +62,7 @@ function getRandomWord() {
     return wordList[Math.floor(Math.random()* wordList.length)];
 };
 
+//0.366*20=17.8789
 
 // updateTime function
 function updateTime() {
@@ -98,6 +99,7 @@ addWordToDom();
 
 //listening for input events and matching words
 inputText.addEventListener('input', (e) => {
+    console.log(e.target);
     let typedWord = e.target.value;
     if (typedWord === randomWord){
         addWordToDom();
